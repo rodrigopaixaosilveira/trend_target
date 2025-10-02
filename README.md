@@ -1,28 +1,30 @@
-Trend Target 
+# Trend Target (for ML training only)
 
-Attempting to mathematically replicate uptrends and downtrends to use as a target in a machine learning model.
-Warning: This is not a trading indicator and should not be used for live trading, as it contains lookahead bias. Its purpose is solely for training ML models.
+**Attempting to mathematically replicate uptrends and downtrends to use as a target in a machine learning model.**
+**Warning:** This is **not a trading indicator** and **should not be used for live trading**, as it contains lookahead bias. Its purpose is **solely for training ML models**.
 
-How it works
+## How it works
 
-Peak and Trough Detection
+1. **Peak and Trough Detection**
 
-Selects the highest high and lowest low within a given lookback window.
+   * Selects the **highest high** and **lowest low** within a given lookback window.
 
-Line Interpolation
+2. **Line Interpolation**
 
-Connects the peaks and troughs with interpolated lines.
+   * Connects the peaks and troughs with interpolated lines.
+   * Facilitates trend movement visualization.
 
-Facilitates trend movement visualization.
+3. **Target Calculation**
 
-Target Calculation
+   * Computes the **percentage change** between consecutive peaks and troughs.
+   * Assigns the target:
 
-Computes the percentage change between consecutive peaks and troughs.
+     * **Uptrend (1):** if both percentage changes exceed `threshold_pct`.
+     * **Downtrend (-1):** if both percentage changes are below `-threshold_pct`.
+     * **Neutral (0):** otherwise.
 
-Assigns the target:
+## Example Usage
 
-Uptrend (1): if both percentage changes exceed threshold_pct.
-
-Downtrend (-1): if both percentage changes are below -threshold_pct.
-
-Neutral (0): otherwise.
+* Visualize the price line with detected peaks and troughs.
+* Generate interpolated lines for trend representation.
+* Compute targets for machine learning models.
