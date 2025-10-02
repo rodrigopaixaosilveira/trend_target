@@ -28,3 +28,6 @@
 * Visualize the price line with detected peaks and troughs.
 * Generate interpolated lines for trend representation.
 * Compute targets for machine learning models.
+
+
+https://github.com/rodrigopaixaosilveira/trend_target/blob/main/output.png
