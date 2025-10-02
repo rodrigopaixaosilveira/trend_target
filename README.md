@@ -30,4 +30,4 @@
 * Compute targets for machine learning models.
 
 
-https://github.com/rodrigopaixaosilveira/trend_target/blob/main/output.png
+<img width="1062" height="547" alt="output" src="https://github.com/user-attachments/assets/924cb7ef-9748-4365-8e12-b458bf6816ac" />
